@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosméticos</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="img/logo-icon.ico" />
+
+</head>
+<body class="container-fluid">
+    
+    <header style="align-items:center" class="row mb-4">
+            <div class="col-3">
+                <img class="w-75 none" src="img/svg/menu.svg">
+            </div>
+            <div class="col-6 text-center"> 
+                <a href="index.html"><img class="w-25" src="img/svg/logo-icon.svg" alt=""></a>
+            </div>
+            <div class="col-3">
+                
+            </div>
+    </header>
+
+    <section class="header-items row">
+        <div class="slide-options col-12">
+            <ul>
+                <a href="itemsi.html"><li class="text-center"> Oléos</li></a>
+                <a href="itemsii.html"><li class="text-center this-page"> Cosméticos</li></a>
+                <a href="itemsiii.html"><li class="text-center"> Difusores</li></a>
+            </ul>
+        </div>
+        <div class="col-12 mt-3">
+            <h2>Cosméticos Naturais</h2>
+        </div>
+        <div class="col-12 mb-4">
+            <h3>Descrição 2</h3>
+        </div>
+
+    </section>
+
+    <section class="row px-3">
+        <div id="lista2" class="list row">
+
+            <div class="col-6 col-md-4 col-lg-3 p-2">   
+                <div onclick="activeModal()" class="item">       
+                    <div class="card bg-light text-white">           
+                        <img id="h-image" class="card-img" src="img/condicionador.png" alt="Imagem do card">           
+                        <div class="card-img-overlay align-bottom">               
+                            <h5 id="h-name" class="bg-secondary">Condicionador sólido</h5>           
+                        </div>       
+                    </div>   
+                </div>   
+                <div class="d-none">       
+                    <h2 id="h-subname">Em barra</h2>       
+                    <p id="h-description">Condicionador em barra de limpeza profunda para cabelos oleosos, cabelos secos, cabelos mistos, cabelos com química, removendo impurezas e hidratando os fios com componentes naturais à base de óleos essenciais, vegano, não testado em animais e com fórmula livre de parabenos, silicones, sulfatos e sintéticos.</p>       
+                    <p id="h-body"></p>       
+                    <p id="h-mind"></p>       
+                    <p id="h-skin"></p>   
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 p-2">   
+                <div onclick="activeModal()" class="item">       
+                    <div class="card bg-light text-white">           
+                        <img id="h-image" class="card-img" src="img/shampoo.png" alt="Imagem do card">           
+                        <div class="card-img-overlay align-bottom">               
+                            <h5 id="h-name" class="bg-secondary">shampoo sólido</h5>           
+                        </div>       
+                    </div>   
+                </div>   
+                <div class="d-none">Em barra</h2>       
+                    <p id="h-description">Shampoo em barra de limpeza profunda para cabelos oleosos, cabelos secos, cabelos mistos, cabelos com química, removendo impurezas e hidratando os fios com componentes naturais à base de óleos essenciais, vegano, não testado em animais e com fórmula livre de parabenos, silicones, sulfatos e sintéticos.</p>       
+                    <p id="h-body"></p>       
+                    <p id="h-mind"></p>       
+                    <p id="h-skin"></p>   
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 p-2">   
+                <div onclick="activeModal()" class="item">       
+                    <div class="card bg-light text-white">           
+                        <img id="h-image" class="card-img" src="img/shampoo.png" alt="Imagem do card">           
+                        <div class="card-img-overlay align-bottom">               
+                            <h5 id="h-name" class="bg-secondary">Serum capilar</h5>           
+                        </div>       
+                    </div>   
+                </div>   
+                <div class="d-none"></h2>       
+                    <p id="h-description">Sérum Capilar de tratamento, hidrata e protege intensamente das agressões externas, além de revitalizar e disciplinar os fios, para todos os tipos de cabelos e sempre aplicar no comprimento as pontas, com componentes naturais à base de óleos essenciais, vegano, não testado em animais e com fórmula livre de parabenos, silicones, sulfatos e sintéticos</p>       
+                    <p id="h-body"></p>       
+                    <p id="h-mind"></p>       
+                    <p id="h-skin"></p>   
+                </div>
+            </div>
+
+
+
+
+            <div class="col-6 col-md-4 col-lg-3 p-2">   
+                <div onclick="activeModal()" class="item">       
+                    <div class="card bg-light text-white">           
+                        <img id="h-image" class="card-img" src="img/argila_branca.png" alt="Imagem do card">           
+                        <div class="card-img-overlay align-bottom">               
+                            <h5 id="h-name" class="bg-secondary">Argila branca</h5>           
+                        </div>       
+                    </div>   
+                </div>   
+                <div class="d-none">Clareadora</h2>       
+                    <p id="h-description">Indicada para peles sensíveis e desidratadas, pH é muito próximo da pele, ideal para antes da maquiagem, reduz linhas de expressão, clareia, absorve a oleosidade sem desidratar, ação tensora, cicatrizante, repõem massa capilar e devolve água na parte intra celular da pele e fios capilares, no corpo reduz celulite e gordura localizada, diminui os estafilococos que é a bactéria da acnea. </p>       
+                    <p id="h-body"></p>       
+                    <p id="h-mind"></p>       
+                    <p id="h-skin"></p>   
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 p-2">   
+                <div onclick="activeModal()" class="item">       
+                    <div class="card bg-light text-white">           
+                        <img id="h-image" class="card-img" src="img/argila_verde.png" alt="Imagem do card">           
+                        <div class="card-img-overlay align-bottom">               
+                            <h5 id="h-name" class="bg-secondary">Argila verde</h5>           
+                        </div>       
+                    </div>   
+                </div>   
+                <div class="d-none">Antioliosidade</h2>       
+                    <p id="h-description">Peeling suave, Regeneradora da pele, Adstringente e Remineralizante. Na face é indicada para pele oleosa com acne. No corpo auxilia no combate a celulite, gorduras localizadas e flacidez. Nos cabelos ajuda no combate a caspa, seborréia e até mesmo a queda. </p>       
+                    <p id="h-body"></p>       
+                    <p id="h-mind"></p>       
+                    <p id="h-skin"></p>   
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 p-2">   
+                <div onclick="activeModal()" class="item">       
+                    <div class="card bg-light text-white">           
+                        <img id="h-image" class="card-img" src="img/argila_vermelha.png" alt="Imagem do card">           
+                        <div class="card-img-overlay align-bottom">               
+                            <h5 id="h-name" class="bg-secondary">Argila vermelha</h5>           
+                        </div>       
+                    </div>   
+                </div>   
+                <div class="d-none">Rejuvenecedora</h2>       
+                    <p id="h-description">A argila vermelha é excelente para peles sensíveis e peles maduras. Ela absorve a oleosidade, hidrata, previne linhas de expressão, tem efeito cicatrizante e, por ser rica em óxido de ferro, ela ajuda a rejuvenecer a pele.</p>       
+                    <p id="h-body"></p>       
+                    <p id="h-mind"></p>       
+                    <p id="h-skin"></p>   
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 p-2">   
+                <div onclick="activeModal()" class="item">       
+                    <div class="card bg-light text-white">           
+                        <img id="h-image" class="card-img" src="img/argila_dourada.png" alt="Imagem do card">           
+                        <div class="card-img-overlay align-bottom">               
+                            <h5 id="h-name" class="bg-secondary">Argila dourada</h5>           
+                        </div>       
+                    </div>   
+                </div>   
+                <div class="d-none">Tensora</h2>       
+                    <p id="h-description">Rica em minerais para formação de colágeno, indicada para promover o embelezamento, por ter ação detox, hidratante e rejuvenescedora. Combate o envelhecimento, flacidez, estimula o colágeno, ativa a circulação, reduz o inchaço do corpo, redução de medidas após a drenagem.</p>       
+                    <p id="h-body"></p>       
+                    <p id="h-mind"></p>       
+                    <p id="h-skin"></p>   
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 p-2">   
+                <div onclick="activeModal()" class="item">       
+                    <div class="card bg-light text-white">           
+                        <img id="h-image" class="card-img" src="img/argila_preta.png" alt="Imagem do card">           
+                        <div class="card-img-overlay align-bottom">               
+                            <h5 id="h-name" class="bg-secondary">Argila preta</h5>           
+                        </div>       
+                    </div>   
+                </div>   
+                <div class="d-none">Detox</h2>       
+                    <p id="h-description">A argila preta é a mais nobre de todas, tem função detox, purificante, ideal para limpeza de pele e na remoção de cravos e espinhas. Tem ação antiinflamatória, anti-artrósica, absorvente e anti-stress, pode ser usado tanto para cosmética como para tratamentos de doenças.</p>       
+                    <p id="h-body">Lavar previamente o local (face, corpo ou cabelos), misture um sachê de Argila em água até formar uma pasta cremosa, aplicar na região desejada, deixa agir por 15 minutos e remova totalmente a Argila.  </p>       
+                    <p id="h-mind">Evitar contato com os olhos e mucosas, acondicionar em lugar seco e arejado. Manter fora do alcance de crianças. Uso externo.</p>       
+                    <p id="h-skin"></p>   
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+
+
+
+    <footer class="row pt-3">
+        <div class="col-12 text-left mb-4">
+            <img class="w-75" src="img/svg/vertical-logo.svg" alt="">
+        </div>
+        <div class="col-12 text-left">
+            <ul class="ml-3">
+                <li><a href="itemsi.html">Óleos</a></li>
+                <li><a href="itemsii.html">Cosméticos</a></li>
+                <li><a href="itemsiii.html">Difusores</a></li>
+            </ul>
+        </div>
+        <div style="justify-content: space-between" class="col-12 text-left d-flex">
+            <div>
+                <img class="d-inline ml-3" src="img/svg/facebook.svg" alt="">
+                <img class="d-inline ml-3" src="img/svg/instagram.svg" alt="">
+            </div>
+            <a style="align-self:center" class="pr-3">email</a>
+        </div>
+        <hr>
+        <div class="col-12 text-center">
+            <p style="opacity: 0.55;" class="mb-1">Natullie Produtos Naturais © 2022</p>
+        </div>
+    </footer>
+
+    <section class='product-modal'>
+        <div class="container mt-3">
+            <div class="row justify-content-start bg-transp">
+                <h4 onclick="activeModal()" class="ml-3 mt-4 mb-2 text-light">< Voltar</h4>
+            </div>
+            <div class="card p-3 m-md-5 shadow blackborder">
+                <div class="row justify-content-center">
+                    <div class="row text-center">
+                        <div class=" col-12 p-4 d-block d-lg-none">
+                            <h2 id="product-name" style="text-transform: capitalize;">dd</h2>
+                            <h3 id="product-subname" style="font-size: 1.4rem;">slaaaaaaaaaaaaaaaaaaa</h3>
+                        </div>
+                        <div class="col-12 p-2 d-none d-lg-block">
+                            <h2 id="product-name2" style="text-transform: capitalize;">Oléo de Alecrim pararadasddsadasdsa</h2>
+                            <h3 id="product-subname2" style="font-size: 1.4rem;">slaaaaaaaaaaaaaaaaaaa</h3>
+                        </div>
+                    </div>
+                    <div id="img-div" class="col-lg-8 p-3">
+                        <img id="product-image" class="w-100 shadow-sm rounded" src="img/oleo_capim.png">
+                    </div>
+                    <div class="col-12 row p-4 justify-content-md-center text-left text-md-center">
+                        <div class="col-md-12 col-lg-10 p-2">
+                            <div class="col-12 p-2">
+                                <h5>Descrição</h5>
+                                <p id="product-description" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
+                            </div>
+                            <div class="col-12 p-2">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="roll" style="background-color: #D9D9D9;"></span>
+                                    <h5 class="d-inline text-left m-0 ml-2 py-2 px-3" style="background-color: #D9D9D9;">Modo de usar</h5>
+                                </div>
+                                <p id="product-body" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
+                            </div>
+                            <div class="col-12 p-2">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="roll" style="background-color: #FF6B2C;"></span>
+                                    <h5 class="d-inline text-left m-0 ml-2 py-2 px-3" style="background-color: #FF6B2C;">Precauções</h5>
+                                </div>
+                                <p id="product-mind" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+  
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        import "firebase/firestore";
+        // Your web app's Firebase configuration
+
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyC-BnTDHpxBIwAzulQVTFCy0fVWzgknYlE",
+          authDomain: "natullie.firebaseapp.com",
+          projectId: "natullie",
+          storageBucket: "natullie.appspot.com",
+          messagingSenderId: "810635702244",
+          appId: "1:810635702244:web:57bc2c46f8d27596f321f1"
+          
+        };
+      
+        firebase.initializeApp(firebaseConfig);
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+    
+    <script  src="script.js" ></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

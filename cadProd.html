@@ -1,0 +1,73 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+        <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+        <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    </head>
+    <body class="container">
+
+        <section>
+            <header>
+              <h1>cadastro</h1>
+            </header>
+        </section>
+
+        <section class="cred">
+            <form>
+                <div>
+                    <label for="GET-name">Nome: </label>
+                    <input value="" type="text" id="GET-name" name="name">
+                </div>
+                <div>
+                    <label for="GET-name">Nome da imagem: </label>
+                    <input value="" type="text" id="GET-image" name="image">
+                </div>
+            
+                <div>
+                    <label for="GET-subname">Subname: </label>
+                    <input value="" type="text" id="GET-subname" name="subname">
+                </div>
+
+                <div>
+                    <label for="GET-description">Descrição: </label>
+                    <input type="text" id="GET-description" name="description">
+                </div>
+
+                <div>
+                    <label for="GET-body">Corpo</label>
+                    <input type="text" id="GET-body" name="body">
+                    <label for="GET-mind">Mente </label>
+                    <input type="text" id="GET-mind" name="mind">
+                    <label for="GET-skin">Pele </label>
+                    <input type="text" id="GET-skin" name="skin">
+                </div>
+                
+
+                <div reset="true" onclick="cadastrarParceiro()">Cadastrar Produto</div>
+            </form>
+        </section>
+
+
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <script src="script.js"></script>
+    </body>
+</html>
