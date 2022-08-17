@@ -10,6 +10,7 @@ const firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
 
+  let nId = 0;
 
 const db = firebase.firestore();
 
@@ -17,22 +18,26 @@ db.collection("oils").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         console.log(doc.id, " => ", doc.data());
+
+        nId++;
+        console.log("Item "+nId)
+
         let htmlProducts ='';
         htmlProducts += '<div class="col-6 col-md-4 col-lg-3 p-2">'
-        htmlProducts += '   <div onclick="activeModal()" class="item">'
+        htmlProducts += '   <div onclick="activeModal('+nId+')" class="item">'
         htmlProducts += '       <div class="card bg-light text-white">'
-        htmlProducts += '           <img id="h-image" class="card-img" src="img/'+doc.data().image+'.png" alt="Imagem do card">'
+        htmlProducts += '           <img id="h-image-'+nId+'" class="card-img" src="img/'+doc.data().image+'.png" alt="Imagem do card">'
         htmlProducts += '           <div class="card-img-overlay align-bottom">'
-        htmlProducts += '               <h5 id="h-name" class="bg-secondary">'+doc.data().name+'</h5>'
+        htmlProducts += '               <h5 id="h-name-'+nId+'" class="bg-secondary">'+doc.data().name+'</h5>'
         htmlProducts += '           </div>'
         htmlProducts += '       </div>'
         htmlProducts += '   </div>'
         htmlProducts += '   <div class="d-none">'
-        htmlProducts += '       <h2 id="h-subname">'+doc.data().subname+'</h2>'
-        htmlProducts += '       <p id="h-description">'+doc.data().description+'</p>'
-        htmlProducts += '       <p id="h-body">'+doc.data().body+'</p>'
-        htmlProducts += '       <p id="h-mind">'+doc.data().mind+'</p>'
-        htmlProducts += '       <p id="h-skin">'+doc.data().skin+'</p>'
+        htmlProducts += '       <h2 id="h-subname-'+nId+'">'+doc.data().subname+'</h2>'
+        htmlProducts += '       <p id="h-description-'+nId+'">'+doc.data().description+'</p>'
+        htmlProducts += '       <p id="h-body-'+nId+'">'+doc.data().body+'</p>'
+        htmlProducts += '       <p id="h-mind-'+nId+'">'+doc.data().mind+'</p>'
+        htmlProducts += '       <p id="h-skin-'+nId+'">'+doc.data().skin+'</p>'
         htmlProducts += '   </div>'
         htmlProducts += '</div>'
         document.getElementById("lista").innerHTML+=htmlProducts;
@@ -42,14 +47,14 @@ db.collection("oils").get().then((querySnapshot) => {
 
 var modal = document.querySelector(".product-modal")
 
-function activeModal(){
-    let name =document.getElementById("h-name").innerText;
-    let image = document.getElementById("h-image").src.toString();
-    let subname = document.getElementById("h-subname").innerText
-    let description = document.getElementById("h-description").innerText
-    let body = document.getElementById("h-body").innerText
-    let mind = document.getElementById("h-mind").innerText
-    let skin = document.getElementById("h-skin").innerText
+function activeModal(num){
+    let name = document.getElementById("h-name-"+num).innerText;
+    let image = document.getElementById("h-image-"+num).src.toString();
+    let subname = document.getElementById("h-subname-"+num).innerText
+    let description = document.getElementById("h-description-"+num).innerText
+    let body = document.getElementById("h-body-"+num).innerText
+    let mind = document.getElementById("h-mind-"+num).innerText
+    let skin = document.getElementById("h-skin-"+num).innerText
     modal.classList.toggle("active")
     document.getElementById("product-name").innerHTML=name
     document.getElementById("product-subname").innerHTML='<i>'+subname+'</i>'
@@ -63,8 +68,10 @@ function activeModal(){
     document.getElementById("product-body").innerHTML=body
     document.getElementById("product-mind").innerHTML=mind
     document.getElementById("product-skin").innerHTML=skin
+}
 
-
+function desactiveModal(){
+    modal.classList.toggle("active")
 }
 
 
