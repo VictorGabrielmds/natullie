@@ -27,45 +27,46 @@
         </section>
 
         <section class="cred">
-            <form>
-                <div>
+            <form class="row">
+                <div class="col-6">
                     <label for="GET-name">Nome do produto: </label>
-                    <input value="" type="text" id="GET-name" name="name">
+                    <input class="form-control" value="" type="text" id="GET-name" name="name">
                 </div>
-                <div>
+                <div class="col-6">
+                    <label for="GET-subname">Nome científico: </label>
+                    <input class="form-control"  value="" type="text" id="GET-subname" name="subname">
+                </div>
+                <div class="col-6">
                     <label for="GET-area">Area: </label>
-                    <select name="ares" id="GET-area">
-                    <option value="oils">Oléo Essencial ou vegetal</option>
-                    <option value="cosmetics">Cosméticos</option>
-                    <option value="diffusers">Difussor
+                    <select class="form-control" name="ares" id="GET-area">
+                        <option value="oils">Oléo Essencial ou vegetal</option>
+                        <option value="cosmetics">Cosméticos</option>
+                        <option value="diffusers">Difussor
                     </option></select>
                 </div>
-                <div>
+                <div class="col-12 w-50 mt-2">
                     <label for="GET-name">Nome da imagem: </label>
-                    <input value="" type="text" id="GET-image" name="image">
+                    <input class="form-control" value="" type="text" id="GET-image" name="image">
                 </div>
             
-                <div>
-                    <label for="GET-subname">Subname: </label>
-                    <input value="" type="text" id="GET-subname" name="subname">
-                </div>
+                
 
-                <div>
+                <div class="col-12 mt-3">
                     <label for="GET-description">Descrição: </label>
-                    <input type="text" id="GET-description" name="description">
+                    <textarea  class="form-control" type="text" id="GET-description" rows="3" name="description"></textarea>
                 </div>
 
-                <div>
+                <div class="col-12 mt-2 ">
                     <label for="GET-body">Corpo</label>
-                    <input type="text" id="GET-body" name="body">
+                    <textarea  rows="3" class="form-control col-12" type="text" id="GET-body" name="body"> </textarea>
                     <label for="GET-mind">Mente </label>
-                    <input type="text" id="GET-mind" name="mind">
+                    <textarea  rows="3" class="form-control" type="text" id="GET-mind" name="mind"></textarea>
                     <label for="GET-skin">Pele </label>
-                    <input type="text" id="GET-skin" name="skin">
+                    <textarea  rows="3" class="form-control" type="text" id="GET-skin" name="skin"></textarea>
                 </div>
                 
 
-                <div reset="true" onclick="cadastrarParceiro()">Cadastrar Produto</div>
+                <div  class="btn btn-success col-12 my-3" reset="true" onclick="cadastrarParceiro()">Cadastrar Produto</div>
             </form>
         </section>
 
