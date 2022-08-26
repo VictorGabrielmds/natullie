@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyC-BnTDHpxBIwAzulQVTFCy0fVWzgknYlE",
-    authDomain: "natullie.firebaseapp.com",
-    projectId: "natullie",
-    storageBucket: "natullie.appspot.com",
-    messagingSenderId: "810635702244",
-    appId: "1:810635702244:web:57bc2c46f8d27596f321f1"
+    apiKey: "AIzaSyAReYVYdhaPNIUYLlMi4eKkmDyqZvgoFfM",
+    authDomain: "natullie-ff69c.firebaseapp.com",
+    projectId: "natullie-ff69c",
+    storageBucket: "natullie-ff69c.appspot.com",
+    messagingSenderId: "520379231934",
+    appId: "1:520379231934:web:e9c99c241b0b2c612e78ef"
     
   };
 
