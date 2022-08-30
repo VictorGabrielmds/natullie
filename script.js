@@ -70,7 +70,7 @@ if(oilExists){
             htmlProducts += '<div class="col-6 col-md-4 col-lg-3 p-2">'
             htmlProducts += '   <div onclick="activeModal('+nId+')" class="item">'
             htmlProducts += '       <div class="card bg-light text-white">'
-            htmlProducts += '           <img id="h-image-'+nId+'" class="card-img" src="img/'+doc.data().image+'.png" alt="Imagem do card">'
+            htmlProducts += '           <img id="h-image-'+nId+'" class="card-img mx-auto" src="img/'+doc.data().image+'.png" alt="Imagem do card">'
             htmlProducts += '           <div class="card-img-overlay align-bottom">'
             htmlProducts += '               <h5 id="h-name-'+nId+'" class="bg-secondary">'+doc.data().name+'</h5>'
             htmlProducts += '           </div>'
