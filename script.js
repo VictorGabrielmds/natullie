@@ -107,7 +107,6 @@ function activeModal(num){
 
 
     document.querySelector(".init").scrollIntoView()
-    document.getElementById("product-image").setAttribute("src", image)
 
     document.getElementById("product-description").innerHTML=description
 
