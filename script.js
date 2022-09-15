@@ -10,6 +10,8 @@ const firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
+  
+  console.log("mds")
 
 
   let nId = 0;
