@@ -12,6 +12,8 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+        <link rel="stylesheet" href="style.css">
+
         <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 
         <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -33,7 +35,69 @@
             
         </section>
 
-        
+        <div class="bg-modal position-fixed"></div>
+
+        <section class='product-modal'>
+            
+            <div class="container mt-3">
+                <hr class="eita">
+                
+                <div class="init row justify-content-start bg-transp">
+                    <h4 style="z-index: 999999;"  onclick="toggleModalOfEdit()" class="ml-3 mt-4 mb-2 text-light">< Voltar</h4>
+                </div>
+                <div class="card p-3 m-md-5 shadow blackborder">
+                    <div class="row justify-content-center">
+                        <div class="row text-center">
+                            <div class=" col-12 p-4 d-block d-lg-none text-center">
+                                <h2 id="product-name" style="text-transform: capitalize;">dd</h2>
+                                <h3 id="product-subname" style="font-size: 1.4rem;">slaaaaaaaaaaaaaaaaaaa</h3>
+                            </div>
+                            <div class="col-12 p-2 d-none d-lg-block">
+                                <h2 id="product-name2" style="text-transform: capitalize;">Oléo de Alecrim pararadasddsadasdsa</h2>
+                                <h3 id="product-subname2" style="font-size: 1.4rem;">slaaaaaaaaaaaaaaaaaaa</h3>
+                            </div>
+                        </div>
+                    
+                        <div class="col-12 row p-4 justify-content-md-center text-left text-md-center">
+                            <div class="col-md-12 col-lg-10 p-2">
+                                <div class="col-12 p-2">
+                                    <h5>Descrição</h5>
+                                    <p id="product-description" class="text-justify"></p>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <p id="product-keys" class="text-justify"></p>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <h5>Sistema que atua:</h5>
+                                    <p id="product-system" class="text-justify"></p>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="roll" style="background-color: #D9D9D9;"></span>
+                                        <h5 class="d-inline text-left m-0 ml-2 py-2 px-3" style="background-color: #D9D9D9;">Corpo</h5>
+                                    </div>
+                                    <p id="product-body" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="roll" style="background-color: #FF6B2C;"></span>
+                                        <h5 class="d-inline text-left m-0 ml-2 py-2 px-3" style="background-color: #FF6B2C;">Mente</h5>
+                                    </div>
+                                    <p id="product-mind" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="roll" style="background-color: #0794dc;"></span>
+                                        <h5 class="d-inline text-left m-0 ml-2 py-2 px-3" style="background-color: #0794dc;">Pele</h5>
+                                    </div>
+                                    <p id="product-skin" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
         
 
 

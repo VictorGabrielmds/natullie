@@ -12,10 +12,7 @@ const firebaseConfig = {
   const db = firebase.firestore();
   
 
-
-
-  let nId = 0;
-
+let nId = 0;
 
 const listOil = document.getElementById("lista-oil")
 const oilExists = document.body.contains(listOil)
@@ -34,10 +31,6 @@ var bgm = document.querySelector(".bg-modal")
 
 
 showLoadingScreenFor(4000)
-
-
-
-
 
 
 if(oilExists){carregarOleos("lista-oil");
@@ -193,4 +186,14 @@ function carregarOleos(list){
             document.getElementById(list).innerHTML+=htmlProducts;
         });
     });
+}
+
+function toggleModalOfEdit(num){
+    loadDataInEditsModal(num);
+    modal.classList.toggle("active");
+    bgm.classList.toggle("bg-modal-atv");  
+}
+
+function loadDataInEditModal(num){
+    
 }
