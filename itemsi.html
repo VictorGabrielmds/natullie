@@ -15,21 +15,23 @@
 
 
 </head>
-<body  class="container-fluid">
+<body class="container-fluid">
     
+    <div id="loading"><div><img src="img/logo-icon.gif" alt=""></div></div>
+
     <header style="align-items:center" class="row mb-4 init">
             <div class="col-3">
                 <img class="w-75 none" src="img/svg/menu.svg">
             </div>
             <div class="col-6 text-center"> 
-                <a href="index.html"><img class="w-25" src="img/svg/logo-icon.svg" alt=""></a>
+                <a href="index.html"><img class="logo" src="img/svg/logo-icon.svg" alt=""></a>
             </div>
             <div class="col-3">
                 
             </div>
     </header>
 
-    <section class="header-items row">
+    <section class="header-items row text-center">
         <div class="slide-options col-12">
             <ul>
                 <a href="itemsi.html"><li class="text-center"> Oléos</li></a>
@@ -46,14 +48,12 @@
 
     </section>
 
-    <section id="product-list" data-source-json="./mockdata/mock-products.json"
+    <section id="lista-oil" data-source-json="./mockdata/mock-products.json"
     data-aside="true"
     data-filter="true" 
-    class="row px-3">
+    class="list row px-0 px-md-3 mx-0 mx-md-4">
 
-        <div id="lista-oil" class="list row">
-
-        </div>
+    
 
         
         
@@ -89,12 +89,15 @@
     </footer>
 
 
-
+    <div class="bg-modal position-fixed"></div>
 
     <section class='product-modal'>
+        
         <div class="container mt-3">
-            <div class="row justify-content-start bg-transp">
-                <h4 class="init" onclick="desactiveModal()" class="ml-3 mt-4 mb-2 text-light">< Voltar</h4>
+            <hr class="eita">
+            
+            <div class="init row justify-content-start bg-transp">
+                <h4 style="z-index: 999999;"  onclick="desactiveModal()" class="ml-3 mt-4 mb-2 text-light">< Voltar</h4>
             </div>
             <div class="card p-3 m-md-5 shadow blackborder">
                 <div class="row justify-content-center">
@@ -114,6 +117,13 @@
                             <div class="col-12 p-2">
                                 <h5>Descrição</h5>
                                 <p id="product-description" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
+                            </div>
+                            <div class="col-12 p-2">
+                                <p id="product-keys" class="text-justify"></p>
+                            </div>
+                            <div class="col-12 p-2">
+                                <h5>Sistema que atua:</h5>
+                                <p id="product-system" class="text-justify"></p>
                             </div>
                             <div class="col-12 p-2">
                                 <div class="d-flex align-items-center mb-3">

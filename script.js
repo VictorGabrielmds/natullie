@@ -24,7 +24,7 @@ const cosmeticsExists = document.body.contains(listCosmetics)
 const listdiffuser = document.getElementById("lista-diffuser")
 const diffuserExists = document.body.contains(listCosmetics)
 
-
+setTimeout(carregamento, 1000*4);
 
 if(oilExists){
     db.collection("oils").get().then((querySnapshot) => {
@@ -36,13 +36,14 @@ if(oilExists){
             console.log("Item "+nId)
 
             let htmlProducts ='';
-            htmlProducts += '<div class="col-6 col-md-4 col-lg-3 p-2">'
+            htmlProducts += '<div class="col-6 col-md-3 col-lg-3 p-2 px-md-3">'
             htmlProducts += '   <div onclick="activeModal('+nId+')" class="item">'
-            htmlProducts += '       <div class="card bg-light text-white">'
+            htmlProducts += '       <div class="card align-items-center bg-light text-dark" >'
             htmlProducts += '           <img id="h-image-'+nId+'" class="card-img mx-auto" src="img/'+doc.data().image+'.png" alt="Imagem do card">'
-            htmlProducts += '           <div class="card-img-overlay align-bottom">'
-            htmlProducts += '               <h5 id="h-name-'+nId+'" class="bg-secondary">'+doc.data().name+'</h5>'
+            htmlProducts += '           <div style="margin-top:-45px" class="title align-bottom pb-2">'
+            htmlProducts += '               <h5 class="text-center" id="h-name-'+nId+'">'+doc.data().name+'</h5>'
             htmlProducts += '           </div>'
+            htmlProducts += '           <div class=" btnsell product-price shadow py-2 px-4 m-3"><a>Detalhes</a></div>'
             htmlProducts += '       </div>'
             htmlProducts += '   </div>'
             htmlProducts += '   <div class="d-none">'
@@ -67,13 +68,14 @@ if(oilExists){
             console.log("Item "+nId)
 
             let htmlProducts ='';
-            htmlProducts += '<div class="col-6 col-md-4 col-lg-3 p-2">'
+            htmlProducts += '<div class="col-6 col-md-3 col-lg-3 p-2 px-md-3">'
             htmlProducts += '   <div onclick="activeModal('+nId+')" class="item">'
-            htmlProducts += '       <div class="card bg-light text-white">'
+            htmlProducts += '       <div class="card align-items-center bg-light text-dark" >'
             htmlProducts += '           <img id="h-image-'+nId+'" class="card-img mx-auto" src="img/'+doc.data().image+'.png" alt="Imagem do card">'
-            htmlProducts += '           <div class="card-img-overlay align-bottom">'
-            htmlProducts += '               <h5 id="h-name-'+nId+'" class="bg-secondary">'+doc.data().name+'</h5>'
+            htmlProducts += '           <div style="margin-top:-45px" class="title align-bottom pb-2">'
+            htmlProducts += '               <h5 class="text-center" id="h-name-'+nId+'">'+doc.data().name+'</h5>'
             htmlProducts += '           </div>'
+            htmlProducts += '           <div class=" btnsell product-price shadow py-2 px-4 m-3"><a>Detalhes</a></div>'
             htmlProducts += '       </div>'
             htmlProducts += '   </div>'
             htmlProducts += '   <div class="d-none">'
@@ -90,8 +92,10 @@ if(oilExists){
 }
 
 var modal = document.querySelector(".product-modal")
+var bgm = document.querySelector(".bg-modal")
 
 function activeModal(num){
+
     let name = document.getElementById("h-name-"+num).innerText;
     let image = document.getElementById("h-image-"+num).src.toString();
     let subname = document.getElementById("h-subname-"+num).innerText
@@ -100,13 +104,14 @@ function activeModal(num){
     let mind = document.getElementById("h-mind-"+num).innerText
     let skin = document.getElementById("h-skin-"+num).innerText
     modal.classList.toggle("active")
+    bgm.classList.toggle("bg-modal-atv")
     document.getElementById("product-name").innerHTML=name
     document.getElementById("product-subname").innerHTML='<i>'+subname+'</i>'
     document.getElementById("product-name2").innerHTML=name
     document.getElementById("product-subname2").innerHTML=subname
 
 
-    document.querySelector(".init").scrollIntoView()
+    document.querySelector(".eita").scrollIntoView()
 
     document.getElementById("product-description").innerHTML=description
 
@@ -117,8 +122,14 @@ function activeModal(num){
 
 function desactiveModal(){
     modal.classList.toggle("active")
+    
+    bgm.classList.toggle("bg-modal-atv")
 }
 
+function carregamento(){
+    document.getElementById("loading").classList.add("none");
+    console.log("oi")
+}
 
 function cadastrarParceiro() {
     let inputName = document.querySelector("#GET-name").value;
