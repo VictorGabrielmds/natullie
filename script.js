@@ -45,23 +45,27 @@ if(isEditPage){
 
 ////////////////////////// FUNÇÕES ////////////////////////////
 
-function toggleModalOfDetails(num){
+function toggleModalOfDetails(num, ){
     loadDataInDetailsModal(num);
     modal.classList.toggle("active");
     bgm.classList.toggle("bg-modal-atv");  
 }
 
 function loadDataInDetailsModal(num){
-
+    
     //Verifica se o modal já está aberto; Se sim, ele não carrega nada
     if(!(document.getElementById("h-name-"+num))){
         return
     }
 
+    document.querySelector(".eita").scrollIntoView()
     let name = document.getElementById("h-name-"+num).innerText;
     let image = document.getElementById("h-image-"+num).src.toString();
     let subname = document.getElementById("h-subname-"+num).innerText
+    let concept = document.getElementById("h-concept-"+num).innerText;
     let description = document.getElementById("h-description-"+num).innerText
+    let keywords = document.getElementById("h-keywords-"+num).innerText
+    let system = document.getElementById("h-system-"+num).innerText
     let body = document.getElementById("h-body-"+num).innerText
     let mind = document.getElementById("h-mind-"+num).innerText
     let skin = document.getElementById("h-skin-"+num).innerText
@@ -69,13 +73,13 @@ function loadDataInDetailsModal(num){
 
     document.getElementById("product-name").innerHTML=name
     document.getElementById("product-subname").innerHTML='<i>'+subname+'</i>'
-    document.getElementById("product-name2").innerHTML=name
-    document.getElementById("product-subname2").innerHTML=subname
 
-
-    document.querySelector(".eita").scrollIntoView()
+    document.getElementById("product-concept").innerHTML=concept
 
     document.getElementById("product-description").innerHTML=description
+
+    document.getElementById("product-keywords").innerHTML = keywords
+    document.getElementById("product-system").innerHTML = system
 
     document.getElementById("product-body").innerHTML=body
     document.getElementById("product-mind").innerHTML=mind
@@ -125,15 +129,17 @@ function cadastrarProduto() {
 function carregarCosmeticos(list){
     db.collection("cosmetics").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
 
             nId++;
-            console.log("Item "+nId)
 
             let htmlProducts ='';
             htmlProducts += '<div class="col-6 col-md-3 col-lg-3 p-2 px-md-3">'
-            htmlProducts += '   <div onclick="toggleModalOfDetails('+nId+')" class="item">'
+            if(list == "lista-edit"){
+                htmlProducts += '   <div onclick="toggleModalOfEdit('+nId+')" class="item">'
+            } else{
+                htmlProducts += '   <div onclick="toggleModalOfDetails('+nId+')" class="item">'
+            }
+            
             htmlProducts += '       <div class="card align-items-center bg-light text-dark" >'
             htmlProducts += '           <img id="h-image-'+nId+'" class="card-img mx-auto" src="img/'+doc.data().image+'.png" alt="Imagem do card">'
             htmlProducts += '           <div style="margin-top:-45px" class="title align-bottom pb-2">'
@@ -148,6 +154,7 @@ function carregarCosmeticos(list){
             htmlProducts += '       <p id="h-body-'+nId+'">'+doc.data().body+'</p>'
             htmlProducts += '       <p id="h-mind-'+nId+'">'+doc.data().mind+'</p>'
             htmlProducts += '       <p id="h-skin-'+nId+'">'+doc.data().skin+'</p>'
+            htmlProducts += '       <p id="h-type-'+nId+'">cosmetics</p>'
             htmlProducts += '   </div>'
             htmlProducts += '</div>'
             document.getElementById(list).innerHTML+=htmlProducts;
@@ -158,15 +165,16 @@ function carregarCosmeticos(list){
 function carregarOleos(list){
     db.collection("oils").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
 
             nId++;
-            console.log("Item "+nId)
 
             let htmlProducts ='';
             htmlProducts += '<div class="col-6 col-md-3 col-lg-3 p-2 px-md-3">'
-            htmlProducts += '   <div onclick="toggleModalOfDetails('+nId+')" class="item">'
+            if(list == "lista-edit"){
+                htmlProducts += '   <div onclick="toggleModalOfEdit('+nId+')" class="item">'
+            } else{
+                htmlProducts += '   <div onclick="toggleModalOfDetails('+nId+')" class="item">'
+            }   
             htmlProducts += '       <div class="card align-items-center bg-light text-dark" >'
             htmlProducts += '           <img id="h-image-'+nId+'" class="card-img mx-auto" src="img/'+doc.data().image+'.png" alt="Imagem do card">'
             htmlProducts += '           <div style="margin-top:-45px" class="title align-bottom pb-2">'
@@ -177,10 +185,14 @@ function carregarOleos(list){
             htmlProducts += '   </div>'
             htmlProducts += '   <div class="d-none">'
             htmlProducts += '       <h2 id="h-subname-'+nId+'">'+doc.data().subname+'</h2>'
+            htmlProducts += '       <h2 id="h-concept-'+nId+'">'+doc.data().concept+'</h2>'
             htmlProducts += '       <p id="h-description-'+nId+'">'+doc.data().description+'</p>'
+            htmlProducts += '       <p id="h-keywords-'+nId+'">'+doc.data().keywords+'</p>'
+            htmlProducts += '       <p id="h-system-'+nId+'">'+doc.data().system+'</p>'
             htmlProducts += '       <p id="h-body-'+nId+'">'+doc.data().body+'</p>'
             htmlProducts += '       <p id="h-mind-'+nId+'">'+doc.data().mind+'</p>'
-            htmlProducts += '       <p id="h-skin-'+nId+'">'+doc.data().skin+'</p>'
+            htmlProducts += '       <p id="h-skin-'+nId+'">'+doc.data().skin+'</p>'   
+            htmlProducts += '       <p class="h-type">oils</p>'
             htmlProducts += '   </div>'
             htmlProducts += '</div>'
             document.getElementById(list).innerHTML+=htmlProducts;
@@ -189,11 +201,71 @@ function carregarOleos(list){
 }
 
 function toggleModalOfEdit(num){
-    loadDataInEditsModal(num);
+    loadDataInEditModal(num);
     modal.classList.toggle("active");
     bgm.classList.toggle("bg-modal-atv");  
 }
 
 function loadDataInEditModal(num){
-    
+
+    if(!(document.getElementById("h-name-"+num))){
+        return
+    }   
+
+    var docRef = db.collection("oils").doc(document.getElementById("h-name-"+num).innerText);
+
+    docRef.get().then((doc) => {
+        if (doc.exists) {
+                document.querySelector(".eita").scrollIntoView()
+                var name = document.getElementById("product-name-edit").value = doc.data().name
+                var subname = document.getElementById("product-subname-edit").value = doc.data().subname
+                var concept = document.getElementById("product-concept-edit").value = doc.data().concept
+                var description = document.getElementById("product-description-edit").value = doc.data().description               
+                var keywords = document.getElementById("product-keywords-edit").value = doc.data().keywords
+                var system = document.getElementById("product-system-edit").value = doc.data().system
+                var body = document.getElementById("product-body-edit").value = doc.data().body
+                var mind = document.getElementById("product-mind-edit").value = doc.data().mind
+                var skin = document.getElementById("product-skin-edit").value = doc.data().skin
+                document.querySelector("#product-type").value = document.querySelector(".h-type").innerHTML
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+            document.getElementById("product-name-edit").value="name"
+        }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
+}
+
+function updateData(){
+    let inputName = document.querySelector("#product-name-edit").value;
+    let inputSubname = document.querySelector("#product-subname-edit").value;
+    let inputConcept = document.querySelector("#product-concept-edit").value;
+    let inputDescription = document.querySelector("#product-description-edit").value;
+    let inputKeywords = document.querySelector("#product-keywords-edit").value;
+    let inputSystem = document.querySelector("#product-system-edit").value;
+    let inputBody = document.querySelector("#product-body-edit").value;
+    let inputMind = document.querySelector("#product-mind-edit").value;
+    let inputSkin = document.querySelector("#product-skin-edit").value;
+    let inputArea = document.querySelector("#product-type").value;
+
+    console.log(inputSystem)
+    db.collection(inputArea).doc(inputName).set({
+        name: inputName,
+        subname: inputSubname,
+        concept: inputConcept,
+        image: "oleo_",
+        description: inputDescription,
+        keywords: inputKeywords,
+        system: inputSystem,
+        body: inputBody,
+        mind: inputMind,
+        skin: inputSkin
+    })
+    .then(() => {
+        console.log("Document successfully written!");
+    })
+    .catch((error) => {
+        console.error("Error writing document: ", error);
+    });
 }

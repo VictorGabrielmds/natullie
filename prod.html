@@ -48,49 +48,52 @@
                 <div class="card p-3 m-md-5 shadow blackborder">
                     <div class="row justify-content-center">
                         <div class="row text-center">
-                            <div class=" col-12 p-4 d-block d-lg-none text-center">
-                                <h2 id="product-name" style="text-transform: capitalize;">dd</h2>
-                                <h3 id="product-subname" style="font-size: 1.4rem;">slaaaaaaaaaaaaaaaaaaa</h3>
+                            <div class=" col-12 p-4  text-center">
+                                <input class="form-control" value="dd" type="text" id="product-name-edit" name="name">
+                                <input class="form-control" value="dd" type="text" id="product-subname-edit" name="subname">
+                                <input class="form-control" value="dd" type="text" id="product-concept-edit" name="concept">
                             </div>
-                            <div class="col-12 p-2 d-none d-lg-block">
-                                <h2 id="product-name2" style="text-transform: capitalize;">Oléo de Alecrim pararadasddsadasdsa</h2>
-                                <h3 id="product-subname2" style="font-size: 1.4rem;">slaaaaaaaaaaaaaaaaaaa</h3>
-                            </div>
+                            
                         </div>
                     
                         <div class="col-12 row p-4 justify-content-md-center text-left text-md-center">
                             <div class="col-md-12 col-lg-10 p-2">
                                 <div class="col-12 p-2">
                                     <h5>Descrição</h5>
-                                    <p id="product-description" class="text-justify"></p>
+                                    <textarea  class="form-control" type="text" id="product-description-edit" rows="3" name="description"></textarea>
                                 </div>
                                 <div class="col-12 p-2">
-                                    <p id="product-keys" class="text-justify"></p>
+                                    <textarea  class="form-control" type="text" id="product-keywords-edit" rows="3" name="keyswords"></textarea>
                                 </div>
                                 <div class="col-12 p-2">
                                     <h5>Sistema que atua:</h5>
-                                    <p id="product-system" class="text-justify"></p>
+                                    <input class="form-control" value="dd" type="text" id="product-system-edit" name="name">
                                 </div>
                                 <div class="col-12 p-2">
                                     <div class="d-flex align-items-center mb-3">
                                         <span class="roll" style="background-color: #D9D9D9;"></span>
                                         <h5 class="d-inline text-left m-0 ml-2 py-2 px-3" style="background-color: #D9D9D9;">Corpo</h5>
                                     </div>
-                                    <p id="product-body" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
-                                </div>
+                                    <textarea  class="form-control" type="text" id="product-body-edit" rows="3" name="body"></textarea>
+                               </div>
                                 <div class="col-12 p-2">
                                     <div class="d-flex align-items-center mb-3">
                                         <span class="roll" style="background-color: #FF6B2C;"></span>
                                         <h5 class="d-inline text-left m-0 ml-2 py-2 px-3" style="background-color: #FF6B2C;">Mente</h5>
                                     </div>
-                                    <p id="product-mind" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
-                                </div>
+                                    <textarea class="form-control" type="text" id="product-mind-edit" rows="3" name="mind"></textarea>
+                               </div>
                                 <div class="col-12 p-2">
                                     <div class="d-flex align-items-center mb-3">
                                         <span class="roll" style="background-color: #0794dc;"></span>
                                         <h5 class="d-inline text-left m-0 ml-2 py-2 px-3" style="background-color: #0794dc;">Pele</h5>
                                     </div>
-                                    <p id="product-skin" class="text-justify">O Novo Modelo Insight da Olympikus Possui Sistema de Amortecimento Interno e Um Exterior, Que Forma Um Exoesqueleto de Amortecimento para Auxiliar Ainda Mais o Solado na Absorção de Impactos Em Caminhadas e Corridas.</p>
+                                    <textarea  class="form-control" type="text" id="product-skin-edit" rows="3" name="skin"></textarea>
+                               </div>
+                               <div class="d-none" id="product-type" value=""></div>
+                               
+                                <div>
+                                    <button onclick="updateData()">ok</button>
                                 </div>
                             </div>
                         </div>

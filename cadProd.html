@@ -40,15 +40,37 @@
 
         <section class="cred">
             <form class="row">
-                <div class="col-6">
+                <div class="col-12 col-md-4 col-lg-3">
                     <label for="GET-name">Nome do produto: </label>
                     <input class="form-control" value="" type="text" id="GET-name" name="name">
                 </div>
-                <div class="col-6">
+
+                <div class="col-12 col-md-4 col-lg-3">
                     <label for="GET-subname">Nome científico: </label>
                     <input class="form-control"  value="" type="text" id="GET-subname" name="subname">
                 </div>
-                <div class="col-6">
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label for="GET-subname">Sistema que atua: </label>
+                    <input class="form-control"  value="" type="text" id="GET-system" name="system">
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label for="GET-name">Nome da imagem: </label>
+                    <input class="form-control" value="" type="text" id="GET-image" name="image">
+                </div>
+            
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label for="GET-name">Palavras chave: </label>
+                    <input class="form-control" value="" type="text" id="GET-keywords" name="keywords">
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label for="GET-name">Conceito: </label>
+                    <input class="form-control" value="" type="text" id="GET-concept" name="concept">
+                </div>
+
+                <div class="col-8 col-lg-6">
                     <label for="GET-area">Area: </label>
                     <select class="form-control" name="ares" id="GET-area">
                         <option value="oils">Oléo Essencial ou vegetal</option>
@@ -56,11 +78,6 @@
                         <option value="diffusers">Difussor
                     </option></select>
                 </div>
-                <div class="col-12 w-50 mt-2">
-                    <label for="GET-name">Nome da imagem: </label>
-                    <input class="form-control" value="" type="text" id="GET-image" name="image">
-                </div>
-            
                 
 
                 <div class="col-12 mt-3">
@@ -76,7 +93,6 @@
                     <label for="GET-skin">Pele </label>
                     <textarea  rows="3" class="form-control" type="text" id="GET-skin" name="skin"></textarea>
                 </div>
-                
 
                 <div  class="btn btn-success col-12 my-3" reset="true" onclick="cadastrarProduto()">Cadastrar Produto</div>
             </form>
