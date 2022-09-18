@@ -32,9 +32,9 @@ var bgm = document.querySelector(".bg-modal")
 
 showLoadingScreenFor(4000)
 
+console.log("É óleo?")
+oilExists ? carregarOleos("lista-oil") : cosmeticsExists ? carregarCosmeticos("lista-cosmetics") : console.log("erro nas listas");
 
-if(oilExists){carregarOleos("lista-oil");
-} else if(cosmeticsExists){ carregarCosmeticos("lista-cosmetics"); }
 
 console.log(isEditPage)
 if(isEditPage){
@@ -150,10 +150,13 @@ function carregarCosmeticos(list){
             htmlProducts += '   </div>'
             htmlProducts += '   <div class="d-none">'
             htmlProducts += '       <h2 id="h-subname-'+nId+'">'+doc.data().subname+'</h2>'
+            htmlProducts += '       <h2 id="h-concept-'+nId+'">'+doc.data().concept+'</h2>'
             htmlProducts += '       <p id="h-description-'+nId+'">'+doc.data().description+'</p>'
+            htmlProducts += '       <p id="h-keywords-'+nId+'">'+doc.data().keywords+'</p>'
+            htmlProducts += '       <p id="h-system-'+nId+'">'+doc.data().system+'</p>'
             htmlProducts += '       <p id="h-body-'+nId+'">'+doc.data().body+'</p>'
             htmlProducts += '       <p id="h-mind-'+nId+'">'+doc.data().mind+'</p>'
-            htmlProducts += '       <p id="h-skin-'+nId+'">'+doc.data().skin+'</p>'
+            htmlProducts += '       <p id="h-skin-'+nId+'">'+doc.data().skin+'</p>' 
             htmlProducts += '       <p id="h-type-'+nId+'">cosmetics</p>'
             htmlProducts += '   </div>'
             htmlProducts += '</div>'
